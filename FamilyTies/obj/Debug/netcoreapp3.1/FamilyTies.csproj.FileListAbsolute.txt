@@ -1,0 +1,14 @@
+D:\rider projects\FamilyTies\FamilyTies\FamilyTies\bin\Debug\netcoreapp3.1\FamilyTies.exe
+D:\rider projects\FamilyTies\FamilyTies\FamilyTies\bin\Debug\netcoreapp3.1\FamilyTies.deps.json
+D:\rider projects\FamilyTies\FamilyTies\FamilyTies\bin\Debug\netcoreapp3.1\FamilyTies.runtimeconfig.json
+D:\rider projects\FamilyTies\FamilyTies\FamilyTies\bin\Debug\netcoreapp3.1\FamilyTies.runtimeconfig.dev.json
+D:\rider projects\FamilyTies\FamilyTies\FamilyTies\bin\Debug\netcoreapp3.1\FamilyTies.dll
+D:\rider projects\FamilyTies\FamilyTies\FamilyTies\bin\Debug\netcoreapp3.1\FamilyTies.pdb
+D:\rider projects\FamilyTies\FamilyTies\FamilyTies\obj\Debug\netcoreapp3.1\FamilyTies.csproj.AssemblyReference.cache
+D:\rider projects\FamilyTies\FamilyTies\FamilyTies\obj\Debug\netcoreapp3.1\FamilyTies.GeneratedMSBuildEditorConfig.editorconfig
+D:\rider projects\FamilyTies\FamilyTies\FamilyTies\obj\Debug\netcoreapp3.1\FamilyTies.AssemblyInfoInputs.cache
+D:\rider projects\FamilyTies\FamilyTies\FamilyTies\obj\Debug\netcoreapp3.1\FamilyTies.AssemblyInfo.cs
+D:\rider projects\FamilyTies\FamilyTies\FamilyTies\obj\Debug\netcoreapp3.1\FamilyTies.csproj.CoreCompileInputs.cache
+D:\rider projects\FamilyTies\FamilyTies\FamilyTies\obj\Debug\netcoreapp3.1\FamilyTies.dll
+D:\rider projects\FamilyTies\FamilyTies\FamilyTies\obj\Debug\netcoreapp3.1\FamilyTies.pdb
+D:\rider projects\FamilyTies\FamilyTies\FamilyTies\obj\Debug\netcoreapp3.1\FamilyTies.genruntimeconfig.cache
