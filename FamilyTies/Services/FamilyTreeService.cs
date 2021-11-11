@@ -11,12 +11,14 @@ namespace FamilyTies.Services
         public static Person CreatePerson(string name, DateTime birthdate, Gender gender, Person mother = null,
             Person father = null, Person spouse = null)
         {
-            var person = new Person(name, birthdate, gender, mother, father, spouse);
-            mother?.Children.Add(person);
-            father?.Children.Add(person);
+            var person = new Person(name, birthdate, gender, mother, father, spouse?.Spouse is null ? spouse : null);
+            mother?.AddChild(person);
+            father?.AddChild(person);
             if (spouse is not null)
-                spouse.Spouse = person;
-
+            {
+                spouse.Spouse ??= person;
+            }
+            
             return person;
         }
 
@@ -38,7 +40,7 @@ namespace FamilyTies.Services
                 grandParents.AddRange(GetParentsList(parent));
             }
 
-            return grandParents.SelectMany(i => i?.Children)
+            return grandParents.SelectMany(i => i?.GetChildren())
                 .Where(i => !parents.Contains(i))
                 .ToHashSet();
         }
@@ -49,7 +51,7 @@ namespace FamilyTies.Services
 
             var unclesAndAunts = GetUnclesAndAuntsList(person);
             foreach (var item in unclesAndAunts)
-                result.AddRange(item.Children);
+                result.AddRange(item.GetChildren());
 
             return result.ToHashSet();
         }

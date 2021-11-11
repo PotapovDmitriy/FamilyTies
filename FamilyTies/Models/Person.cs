@@ -11,22 +11,62 @@ namespace FamilyTies.Models
             Name = name;
             Birthdate = birthdate;
             Gender = gender;
-            Mother = mother;
-            Father = father;
-            Spouse = spouse;
-            Children = new List<Person>();
+            _mother = mother;
+            _father = father;
+            _spouse = spouse;
+            _children = new List<Person>();
         }
 
         public string Name { get; set; }
         public DateTime Birthdate { get; set; }
         public Gender Gender { get; set; }
-        public Person Mother { get; set; }
-        public Person Father { get; set; }
-        public List<Person> Children { get; set; }
+
+        private Person _mother;
+        private Person _father;
+        private List<Person> _children;
+
+        public Person Mother
+        {
+            get => _mother;
+            set
+            {
+                if (!_children.Contains(value))
+                    _mother = value;
+            }
+        }
+
+        public Person Father
+        {
+            get => _father;
+            set
+            {
+                if (!_children.Contains(value))
+                    _father = value;
+            }
+        }
+
 
         /// <summary>
         /// С кем состоит в отношениях
         /// </summary>
-        public Person Spouse { get; set; }
+        private Person _spouse;
+
+        public Person Spouse
+        {
+            get => _spouse;
+            set
+            {
+                if (_spouse is null && value.Spouse is null)
+                    _spouse = value;
+            }
+        }
+
+        public void AddChild(Person child)
+        {
+            if (child?.Mother == this || child?.Father == this)
+                _children.Add(child);
+        }
+
+        public List<Person> GetChildren() => _children;
     }
 }
