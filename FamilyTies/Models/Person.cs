@@ -30,8 +30,11 @@ namespace FamilyTies.Models
             get => _mother;
             set
             {
-                if (!_children.Contains(value))
-                    _mother = value;
+                if (_children.Contains(value)) 
+                    return;
+                
+                _mother = value;
+                value._children.Add(this);
             }
         }
 
@@ -40,8 +43,11 @@ namespace FamilyTies.Models
             get => _father;
             set
             {
-                if (!_children.Contains(value))
-                    _father = value;
+                if (_children.Contains(value)) 
+                    return;
+                
+                _father = value;
+                value._children.Add(this);
             }
         }
 
@@ -67,6 +73,6 @@ namespace FamilyTies.Models
                 _children.Add(child);
         }
 
-        public List<Person> GetChildren() => _children;
+        public List<Person> GetChildren() => new List<Person>(_children);
     }
 }

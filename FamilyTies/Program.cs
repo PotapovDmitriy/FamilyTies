@@ -28,10 +28,10 @@ namespace FamilyTies
                 auntF);
             var cousin3 = FamilyTreeService.CreatePerson("кузин 3 ", DateTime.Now, Gender.Male,
                 null, uncleF);
-
+            
+            
             var person = FamilyTreeService.CreatePerson("Тот самый", DateTime.Now, Gender.Male, mother, father);
-            var person2 = FamilyTreeService.CreatePerson("Та самая", DateTime.Now, Gender.Male, null, uncleF, person);
-            var person3 = FamilyTreeService.CreatePerson("Еще та самая", DateTime.Now, Gender.Male, null, uncleF, person);
+            person.GetChildren().Add(mother);
 
 
             var parents = FamilyTreeService.GetParentsList(person);
