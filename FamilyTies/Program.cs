@@ -30,8 +30,7 @@ namespace FamilyTies
                 null, uncleF);
             
             
-            var person = FamilyTreeService.CreatePerson("Тот самый", DateTime.Now, Gender.Male, mother, father);
-            person.GetChildren().Add(mother);
+            var person = FamilyTreeService.CreatePerson("Тот самый", DateTime.Now, Gender.Male);
 
 
             var parents = FamilyTreeService.GetParentsList(person);

@@ -11,8 +11,8 @@ namespace FamilyTies.Models
             Name = name;
             Birthdate = birthdate;
             Gender = gender;
-            _mother = mother;
-            _father = father;
+            Mother = mother;
+            Father = father;
             _spouse = spouse;
             _children = new List<Person>();
         }
@@ -21,35 +21,11 @@ namespace FamilyTies.Models
         public DateTime Birthdate { get; set; }
         public Gender Gender { get; set; }
 
-        private Person _mother;
-        private Person _father;
         private List<Person> _children;
 
-        public Person Mother
-        {
-            get => _mother;
-            set
-            {
-                if (_children.Contains(value)) 
-                    return;
-                
-                _mother = value;
-                value._children.Add(this);
-            }
-        }
+        public Person Mother { get; }
 
-        public Person Father
-        {
-            get => _father;
-            set
-            {
-                if (_children.Contains(value)) 
-                    return;
-                
-                _father = value;
-                value._children.Add(this);
-            }
-        }
+        public Person Father { get; }
 
 
         /// <summary>
