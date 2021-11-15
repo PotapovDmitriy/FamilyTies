@@ -56,7 +56,7 @@ namespace FamilyTies.Models
             get => _spouse;
             set
             {
-                if (_spouse is null && value.Spouse is null)
+                if (_spouse is null && value.Spouse == this)
                     _spouse = value;
             }
         }
